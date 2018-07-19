@@ -1,0 +1,9 @@
+/* eslint-disable */
+"use strict";
+
+var readCache = require("read-cache");
+
+module.exports = function (filename) {
+  return readCache(filename, "utf-8");
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9wb3N0Y3NzLWltcG9ydC9saWIvbG9hZC1jb250ZW50LmpzIl0sIm5hbWVzIjpbInJlYWRDYWNoZSIsInJlcXVpcmUiLCJtb2R1bGUiLCJleHBvcnRzIiwiZmlsZW5hbWUiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7O0FBRUEsSUFBTUEsWUFBWUMsUUFBUSxZQUFSLENBQWxCOztBQUVBQyxPQUFPQyxPQUFQLEdBQWlCO0FBQUEsU0FBWUgsVUFBVUksUUFBVixFQUFvQixPQUFwQixDQUFaO0FBQUEsQ0FBakIiLCJmaWxlIjoibG9hZC1jb250ZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgKi9cblwidXNlIHN0cmljdFwiXG5cbmNvbnN0IHJlYWRDYWNoZSA9IHJlcXVpcmUoXCJyZWFkLWNhY2hlXCIpO1xuXG5tb2R1bGUuZXhwb3J0cyA9IGZpbGVuYW1lID0+IHJlYWRDYWNoZShmaWxlbmFtZSwgXCJ1dGYtOFwiKTsiXX0=

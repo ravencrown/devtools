@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>background</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+    (function (global) {
+        global.appConfig = '{#getAppConfig#}';
+        global.firstPageUrl = '{#firstPageUrl#}';
+        global.basePath = window.location.pathname.replace(/[^\\/]*?\.html$/, '');
+    })(window);
+    </script>
+    <!-- 稳定性打点 -->
+    <script type="text/javascript" src="{#swanCorePath#}/monitor/index.js"></script>
+</head>
+<body>
+    <script type="text/javascript" src="{#swanCorePath#}/master/index.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script>
+    (function (global) {
+        global.appjsend();
+    })(window);
+    </script>
+</body>
+</html>

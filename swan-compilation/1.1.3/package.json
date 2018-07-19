@@ -1,0 +1,57 @@
+{
+  "name": "@super-fe/swan-compilation",
+  "version": "1.1.17",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "swan-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --out-dir lib --source-maps inline",
+    "merge-core": "cd ../swan-core;corepath=`pwd`;cd -;echo ${corepath};npm link ${corepath};",
+    "test": "jest --config ./jest.config.js --watchAll",
+    "test:cov": "npm run clear && jest --config ./jest.config.js --coverage",
+    "clear": "rm -rf output*",
+    "cli": "npm run clear && ./bin/index.js --work-path=./tests/src --output=./outputzzz --uglify=true --compile-old-html=true --swan-core-path=/Users/baidu/work/shoubai_work/small_app/swan-core",
+    "watch": "node ./bin/dev.js watch --work-path=./tests/src --compile-old-html=true --output ./output --swan-core-path=/Users/baidu/work/shoubai_work/small_app/swan-core",
+    "dev": "rm -rf tests/src/output && node ./bin/dev.js --work-path=./tests/src --swan-core-path=/Users/baidu/work/shoubai_work/small_app/swan-core"
+  },
+  "pre-commit": [
+    "test:cov"
+  ],
+  "nodemonConfig": {
+    "delay": "200",
+    "ignore": [
+      "tests/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://houyu01@icode.baidu.com:8235/baidu/hpbfe/miniprogram"
+  },
+  "author": "houyu01",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concat-with-sourcemaps": "^1.1.0",
+    "css": "^2.2.1",
+    "ejs": "^2.5.7",
+    "htmlparser2": "^3.9.2",
+    "inline-source-map-comment": "^1.0.5",
+    "postcss": "^6.0.23",
+    "postcss-import": "^11.1.0",
+    "uglify-js": "^3.4.0",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.0.1",
+    "jest": "^23.1.0",
+    "nodemon": "^1.17.5",
+    "pre-commit": "^1.2.2"
+  }
+}
